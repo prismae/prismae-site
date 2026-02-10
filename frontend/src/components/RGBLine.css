@@ -1,0 +1,15 @@
+.rgb-line {
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #ff004c,
+    #00ff99,
+    #00c8ff
+  );
+  margin: 20px 0;
+}
+
+.rgb-line.center {
+  margin-left: auto;
+  margin-right: auto;
+}

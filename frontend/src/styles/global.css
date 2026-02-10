@@ -1,0 +1,75 @@
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+/* Containers */
+.container {
+  max-width: var(--container-width);
+  margin: auto;
+  padding: 0 8%;
+}
+
+/* Títulos */
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+/* Parágrafos */
+p {
+  color: var(--gray-500);
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Seções */
+section {
+  position: relative;
+}
+
+/* Scrollbar (Chrome, Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-700);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-500);
+}
+
+/* Seleção de texto */
+::selection {
+  background: var(--rgb-red);
+  color: var(--black);
+}
