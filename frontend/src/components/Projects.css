@@ -1,40 +1,50 @@
 .projects {
-  padding: 120px 8%;
+  padding: 140px 8%;
   background: #000;
+  position: relative;
 }
 
 .projects h2 {
-  font-size: 2.6rem;
-  margin-bottom: 80px;
+  font-size: 3rem;
+  margin-bottom: 100px;
+  text-align: center;
 }
 
 /* Container */
 .carousel {
   overflow: hidden;
   position: relative;
+  cursor: grab;
+}
+
+.carousel:active {
+  cursor: grabbing;
 }
 
 .projects-track {
   display: flex;
-  gap: 50px;
+  gap: 60px;
   width: max-content;
   will-change: transform;
 }
 
 .project-card {
-  width: 380px;
-  height: 270px;
+  width: 420px;
+  height: 280px;
   background: #111;
-  border-radius: 20px;
+  border-radius: 24px;
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* Destaque automático visual */
 .project-card:hover {
-  transform: scale(1.08);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  transform: scale(1.12);
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.6),
+    0 0 40px rgba(0,255,153,0.2);
 }
 
 .project-overlay {
@@ -42,35 +52,36 @@
   inset: 0;
   background: linear-gradient(
     120deg,
-    rgba(255,0,76,0.9),
-    rgba(0,255,153,0.9),
-    rgba(0,200,255,0.9)
+    rgba(255,0,76,0.95),
+    rgba(0,255,153,0.95),
+    rgba(0,200,255,0.95)
   );
   display: flex;
   align-items: center;
   justify-content: center;
   transform: translateY(100%);
-  transition: 0.4s ease;
+  transition: 0.5s ease;
 }
 
 .project-overlay span {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .project-card:hover .project-overlay {
   transform: translateY(0);
 }
 
-/* Fade profissional */
+/* Fade cinematográfico */
 .fade-left,
 .fade-right {
   position: absolute;
   top: 0;
-  width: 150px;
+  width: 200px;
   height: 100%;
   pointer-events: none;
-  z-index: 2;
+  z-index: 10;
 }
 
 .fade-left {
