@@ -9,7 +9,7 @@ const responses = {
     "Você pode nos contatar pelo formulário de contato do site ou enviar um email diretamente para prismae.contato@gmail.com. Respondemos rapidamente a todas as solicitações.",
     
   "Quais serviços vocês oferecem?": 
-    "Oferecemos desenvolvimento de sites, criação de sistemas web personalizados, integração de APIs, otimização de performance e consultoria digital completa para o seu negócio.",
+    "Oferecemos desenvolvimento de sites institucionais e landing pages, criação de sistemas web simples e personalizados (como cadastros, controles e painéis administrativos), além de serviços de manutenção, hospedagem e melhoria contínua de sites já existentes, com foco em qualidade, desempenho e experiência do usuário.",
     
   "Onde podemos ver trabalhos anteriores?": 
     "Você pode conferir nossos projetos anteriores na seção 'Projetos' do site. Lá mostramos sites, sistemas e soluções digitais que já desenvolvemos para nossos clientes."
