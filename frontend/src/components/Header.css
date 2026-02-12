@@ -1,39 +1,47 @@
 .header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 1000;
   transition: background 0.4s ease, backdrop-filter 0.4s ease;
 }
 
+/* Header quando rola a página */
 .header.scrolled {
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(10px);
 }
 
+/* Container interno */
 .header-container {
   max-width: 1200px;
-  margin: auto;
-  padding: 20px 40px;
+  margin: 0 auto;
+  padding: 16px 24px;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+
   background: #000000;
 }
 
+/* LOGO */
 .logo {
-  height: 50px; 
+  height: clamp(40px, 4vw, 55px); /* responsivo */
   width: auto;
   object-fit: contain;
-
-  margin-left: -100px;
+  cursor: pointer;
 }
 
+/* NAV */
 .nav {
   display: flex;
+  align-items: center;
   gap: 30px;
 }
 
+/* LINKS */
 .nav a {
   position: relative;
   text-decoration: none;
@@ -42,6 +50,7 @@
   transition: color 0.3s ease;
 }
 
+/* LINHA ANIMADA */
 .nav a::after {
   content: '';
   position: absolute;
@@ -57,13 +66,30 @@
   width: 100%;
 }
 
+/* BOTÃO CTA */
 .nav .cta {
   padding: 8px 16px;
   border: 1px solid #ffffff;
+  border-radius: 4px;
   transition: all 0.3s ease;
 }
 
 .nav .cta:hover {
   background: #ffffff;
   color: #000000;
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 12px 16px;
+  }
+
+  .nav {
+    gap: 18px;
+  }
+
+  .nav a {
+    font-size: 0.85rem;
+  }
 }
