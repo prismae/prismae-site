@@ -14,10 +14,10 @@ export default function Projects() {
   const items = [
     'Landing Page',
     'E-commerce',
-    'Sistema Web',
     'Dashboard',
-    'App Mobile',
-    'Sistema SaaS'
+    'Site Institucional',
+    'Sistema Web Simples',
+    'Tema WordPress'
   ]
 
   useEffect(() => {
