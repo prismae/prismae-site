@@ -1,24 +1,40 @@
 .projects {
   padding: 120px 8%;
+  background: #000;
 }
 
 .projects h2 {
-  font-size: 2.2rem;
-  margin-bottom: 60px;
+  font-size: 2.6rem;
+  margin-bottom: 80px;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+/* Container */
+.carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.projects-track {
+  display: flex;
+  gap: 50px;
+  width: max-content;
+  will-change: transform;
 }
 
 .project-card {
-  height: 220px;
-  background: #0f0f0f;
+  width: 380px;
+  height: 270px;
+  background: #111;
+  border-radius: 20px;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
 }
 
 .project-overlay {
@@ -26,9 +42,9 @@
   inset: 0;
   background: linear-gradient(
     120deg,
-    rgba(255,0,76,0.85),
-    rgba(0,255,153,0.85),
-    rgba(0,200,255,0.85)
+    rgba(255,0,76,0.9),
+    rgba(0,255,153,0.9),
+    rgba(0,200,255,0.9)
   );
   display: flex;
   align-items: center;
@@ -38,10 +54,31 @@
 }
 
 .project-overlay span {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
 .project-card:hover .project-overlay {
   transform: translateY(0);
+}
+
+/* Fade profissional */
+.fade-left,
+.fade-right {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.fade-left {
+  left: 0;
+  background: linear-gradient(to right, #000 0%, transparent 100%);
+}
+
+.fade-right {
+  right: 0;
+  background: linear-gradient(to left, #000 0%, transparent 100%);
 }
