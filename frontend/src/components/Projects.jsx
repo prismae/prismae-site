@@ -11,13 +11,22 @@ export default function Projects() {
   const startX = useRef(0)
   const lastX = useRef(0)
 
-  const items = [
-    'Landing Page',
-    'E-commerce',
-    'Dashboard',
-    'Site Institucional',
-    'Sistema Web Simples',
-    'Tema WordPress'
+  const projects = [
+    {
+      title: 'Landing Page',
+      image: '/projects/landing-page/preview.jpg',
+      link: '/projects/landing-page/index.html'
+    },
+    {
+      title: 'E-commerce',
+      image: '/projects/ecommerce/preview.jpg',
+      link: '/projects/ecommerce/index.html'
+    },
+    {
+      title: 'Dashboard',
+      image: '/projects/dashboard/preview.jpg',
+      link: '/projects/dashboard/index.html'
+    }
   ]
 
   useEffect(() => {
@@ -29,7 +38,6 @@ export default function Projects() {
       }
 
       const width = track.scrollWidth / 2
-
       if (Math.abs(position.current) >= width) {
         position.current += width
       }
@@ -39,7 +47,6 @@ export default function Projects() {
     }
 
     animationRef.current = requestAnimationFrame(animate)
-
     return () => cancelAnimationFrame(animationRef.current)
   }, [])
 
@@ -64,15 +71,13 @@ export default function Projects() {
 
     const onUp = () => {
       isDragging.current = false
-      velocity.current = 1
+      velocity.current = 0.8
     }
 
     track.addEventListener('mousedown', onDown)
     track.addEventListener('touchstart', onDown)
-
     window.addEventListener('mousemove', onMove)
     window.addEventListener('touchmove', onMove)
-
     window.addEventListener('mouseup', onUp)
     window.addEventListener('touchend', onUp)
 
@@ -92,12 +97,19 @@ export default function Projects() {
 
       <div className="carousel">
         <div className="projects-track" ref={trackRef}>
-          {[...items, ...items].map((item, index) => (
-            <div className="project-card" key={index}>
+          {[...projects, ...projects].map((project, index) => (
+            <a
+              key={index}
+              className="project-card"
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={project.image} alt={project.title} />
               <div className="project-overlay">
-                <span>{item}</span>
+                <span>{project.title}</span>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
