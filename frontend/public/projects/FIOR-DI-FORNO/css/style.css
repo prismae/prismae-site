@@ -1,0 +1,545 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIÁVEIS DE COR (PROFISSIONAL) */
+:root {
+  --vinho: #8b1e3f;
+  --verde: #1f6f43;
+  --creme: #f5efe6;
+  --marrom: #3a2c2a;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: var(--creme);
+  color: var(--marrom);
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+}
+
+footer {
+  background-color: var(--marrom);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* CONTATO */
+.contato {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #eef7f1, #ffffff);
+  text-align: center;
+}
+
+.contato h2 {
+  font-size: 2rem;
+  color: var(--vinho);
+  margin-bottom: 10px;
+}
+
+.contato-sub {
+  margin-bottom: 30px;
+  font-size: 1.05rem;
+}
+
+#form-contato {
+  max-width: 450px;
+  margin: 0 auto 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#form-contato input,
+#form-contato textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#form-contato textarea {
+  resize: none;
+  height: 120px;
+}
+
+#form-contato button {
+  width: 100%;
+  padding: 12px;
+  font-size: 0.95rem;
+}
+
+/* BOTÃO WHATSAPP */
+.whatsapp {
+  display: inline-block;
+  margin-top: 10px;
+  background: #25d366;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.whatsapp:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.header nav a {
+  position: relative;
+}
+
+.header nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.header nav a:hover::after {
+  width: 100%;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, var(--vinho), #6f142f);
+  color: white;
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.header img,
+.header .logo img {
+  height: 200px;
+  width: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.header nav {
+  margin-top: 10px;
+}
+
+.header nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("../img/pizza-bg.jpg") center/cover;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* CARDÁPIO */
+.cardapio {
+  padding: 60px 20px;
+  background-color: var(--creme);
+  text-align: center;
+}
+
+.pizza-list {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* CARD DE PIZZA */
+.pizza-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.pizza-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.pizza-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.pizza-card h3 {
+  margin: 15px 0 5px;
+  color: var(--vinho);
+}
+
+.pizza-card p {
+  padding: 0 15px;
+  font-size: 0.95rem;
+}
+
+.pizza-card strong {
+  display: block;
+  margin: 15px;
+  font-size: 1.1rem;
+  color: var(--verde);
+}
+
+/* BOTÃO DAS PIZZAS */
+.pizza-card button {
+  background: var(--vinho);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  margin: 12px auto 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  width: auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.pizza-card button:hover {
+  background: var(--verde);
+  transform: scale(1.05);
+}
+
+#add-to-cart {
+  background: linear-gradient(135deg, var(--vinho), #6f142f);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#add-to-cart:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+}
+
+#cart-list li {
+  display: flex;
+  align-items: flex-start; /* 🔥 chave da correção */
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cart-item-text {
+  flex: 1;
+  line-height: 1.4;
+}
+
+.remove-item {
+  background: transparent;
+  border: none;
+  color: var(--vinho);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  padding: 2px;
+  margin-top: 2px; /* micro ajuste fino */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.remove-item:hover {
+  color: #5e1329;
+  transform: scale(1.2);
+}
+
+/* Botão X remover item */
+#cart-list li button {
+  background: transparent;
+  border: none;
+  color: var(--vinho);
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;               
+  line-height: 1;           
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  display: flex;            
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover bonito */
+#cart-list li button:hover {
+  background: rgba(139, 30, 63, 0.15);
+  transform: scale(1.15);
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+#close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#close-cart {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 32px; /* maior */
+  font-weight: bold;
+  color: var(--vinho);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+#close-cart:hover {
+  color: #5e1329;
+  transform: scale(1.2);
+}
+
+#close-cart,
+#close-modal,
+.carrinho li button {
+  cursor: pointer;
+}
+
+/* BOTÕES GERAIS (menores e mais elegantes) */
+button {
+  background: var(--vinho);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  margin-top: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: auto; /* tira aquele botão gigante */
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* BOTÃO ESPECÍFICO DO CARDÁPIO */
+.pizza-card button {
+  margin: 15px auto 20px;
+  display: block;
+  font-size: 0.85rem;
+  padding: 8px 14px;
+}
+
+.carrinho {
+  padding: 40px 20px;
+  background: #fff;
+  max-width: 400px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.carrinho ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.carrinho li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Botão X */
+.carrinho li button {
+  background: transparent;
+  border: none;
+  color: var(--vinho);
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover bonito */
+.carrinho li button:hover {
+  background: rgba(139, 30, 63, 0.15);
+  transform: scale(1.1);
+}
+
+/* MODAL CARRINHO */
+#cart-modal .modal-content {
+  max-width: 420px;
+  animation: slideUp 0.4s ease;
+}
+
+#cart-modal ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+#cart-modal li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.total {
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+
+.finalizar {
+  background: var(--verde);
+}
+
+.modal-content {
+  animation: zoomIn 0.35s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* SOBRE */
+.sobre {
+  background-color: #fff;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.sobre h2 {
+  color: var(--vinho);
+  margin-bottom: 20px;
+}
+
+.sobre p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+
+/* ANIMAÇÕES GERAIS */
+section, footer {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+section:nth-of-type(1) { animation-delay: 0.1s; }
+section:nth-of-type(2) { animation-delay: 0.2s; }
+section:nth-of-type(3) { animation-delay: 0.3s; }
+section:nth-of-type(4) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pagamento-dados {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.pagamento-dados input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

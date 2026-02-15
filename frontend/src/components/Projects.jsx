@@ -11,19 +11,25 @@ export default function Projects() {
   const startX = useRef(0)
   const lastX = useRef(0)
 
+  const dragDistance = useRef(0)
+  const isClickAllowed = useRef(true)
+
   const projects = [
     {
-      title: 'Landing Page',
-      image: '/projects/landing-page/preview.jpg',
-      link: '/projects/landing-page/index.html'
+      title: 'FIOR DI FORNO',
+      hoverTitle: 'Pizzaria • E-commerce',
+      image: '/projects/FIOR-DI-FORNO/preview.jpg',
+      link: '/projects/FIOR-DI-FORNO/index.html'
     },
     {
-      title: 'E-commerce',
+      title: 'Sistema Web',
+      hoverTitle: 'Loja Virtual • HTML • CSS • JS',
       image: '/projects/ecommerce/preview.jpg',
       link: '/projects/ecommerce/index.html'
     },
     {
       title: 'Dashboard',
+      hoverTitle: 'Dashboard Interativo • Frontend',
       image: '/projects/dashboard/preview.jpg',
       link: '/projects/dashboard/index.html'
     }
@@ -55,6 +61,9 @@ export default function Projects() {
 
     const onDown = (e) => {
       isDragging.current = true
+      isClickAllowed.current = true
+      dragDistance.current = 0
+
       startX.current = e.pageX || e.touches[0].pageX
       lastX.current = startX.current
       velocity.current = 0
@@ -62,10 +71,20 @@ export default function Projects() {
 
     const onMove = (e) => {
       if (!isDragging.current) return
+
       const x = e.pageX || e.touches[0].pageX
       const delta = x - lastX.current
+
       position.current += delta
       velocity.current = delta * 0.1
+
+      dragDistance.current += Math.abs(delta)
+
+      // threshold (8px é ideal)
+      if (dragDistance.current > 8) {
+        isClickAllowed.current = false
+      }
+
       lastX.current = x
     }
 
@@ -73,6 +92,7 @@ export default function Projects() {
       isDragging.current = false
       velocity.current = 0.8
     }
+
 
     track.addEventListener('mousedown', onDown)
     track.addEventListener('touchstart', onDown)
@@ -104,10 +124,18 @@ export default function Projects() {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
+              draggable="false"
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={(e) => {
+                if (!isClickAllowed.current) {
+                  e.preventDefault()
+                  e.stopPropagation()
+                }
+              }}
             >
-              <img src={project.image} alt={project.title} />
+              <img src={project.image} alt={project.title} draggable="false"/>
               <div className="project-overlay">
-                <span>{project.title}</span>
+                <span>{project.hoverTitle}</span>
               </div>
             </a>
           ))}
