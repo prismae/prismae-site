@@ -174,10 +174,3 @@ Verifique:
 
 ---
 
-## 📌 Autor
-
-Projeto desenvolvido por **EQUIPE PRISMAE**
-
----
-
-Se quiser, posso **adaptar esse README exatamente ao seu projeto atual** (nomes de pastas, portas, frameworks, etc.).
