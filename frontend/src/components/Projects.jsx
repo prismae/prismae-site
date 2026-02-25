@@ -22,12 +22,9 @@ export default function Projects() {
       link: '/projects/FIOR-DI-FORNO/index.html'
     },
     {
-      title: 'Sistema Web',
-      hoverTitle: 'Loja Virtual • HTML • CSS • JS',
       title: 'KAUA TESTE',
       hoverTitle: 'XXXXX',
       image: '/projects/ecommerce/preview.jpg',
-      link: '/projects/ecommerce/index.html'
       link: '/projects/lojaonline-prototipo/'
     },
     {
