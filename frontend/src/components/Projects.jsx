@@ -22,16 +22,16 @@ export default function Projects() {
       link: '/projects/FIOR-DI-FORNO/index.html'
     },
     {
-      title: 'Sistema Web',
-      hoverTitle: 'Loja Virtual • HTML • CSS • JS',
-      image: '/projects/ecommerce/preview.jpg',
-      link: '/projects/ecommerce/index.html'
+      title: 'Instituto Horizonte Vivo',
+      hoverTitle: 'Site Institucional • HTML • CSS • JS',
+      image: '/projects/Instituto-Horizonte-Vivo/preview.png',
+      link: '/projects/Instituto-Horizonte-Vivo/index.html'
     },
     {
-      title: 'Dashboard',
+      title: 'Kampos',
       hoverTitle: 'Dashboard Interativo • Frontend',
       image: '/projects/dashboard/preview.jpg',
-      link: '/projects/dashboard/index.html'
+      link: '/projects/Kampos/index.html'
     }
   ]
 

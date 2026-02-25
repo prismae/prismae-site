@@ -2,6 +2,7 @@ import Hero from '../components/Hero'
 import Services from '../components/Services'
 import Projects from '../components/Projects'
 import Contact from '../components/Contact'
+import Pricing from '../components/Pricing'
 import RGBLine from '../components/RGBLine'
 
 export default function Home() {
@@ -23,6 +24,11 @@ export default function Home() {
         <Projects />
       </section>
 
+      {/* PRICING */}
+      <section>
+        <Pricing />
+      </section>
+      
       {/* CONTACT */}
       <section>
         <Contact />
