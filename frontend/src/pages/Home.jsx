@@ -3,6 +3,7 @@ import Services from '../components/Services'
 import Projects from '../components/Projects'
 import Contact from '../components/Contact'
 import Pricing from '../components/Pricing'
+import Testimonials from '../components/Testimonials'
 import RGBLine from '../components/RGBLine'
 
 export default function Home() {
@@ -27,6 +28,11 @@ export default function Home() {
       {/* PRICING */}
       <section>
         <Pricing />
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section>
+        <Testimonials />
       </section>
       
       {/* CONTACT */}

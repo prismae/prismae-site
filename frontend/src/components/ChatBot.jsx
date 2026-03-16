@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import "../styles/chatbot.css";
+import "../styles/ChatBot.css";
 
 const responses = {
   "O que é a Prismae?": 
