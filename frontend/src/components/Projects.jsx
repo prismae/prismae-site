@@ -18,8 +18,8 @@ export default function Projects() {
     {
       title: 'FIOR DI FORNO',
       hoverTitle: 'Pizzaria • E-commerce',
-      image: '/projects/FIOR-DI-FORNO/preview.jpg',
-      link: '/projects/FIOR-DI-FORNO/index.html'
+      image: '${import.meta.env.BASE_URL}projects/FIOR-DI-FORNO/preview.jpg',
+      link: '${import.meta.env.BASE_URL}projects/FIOR-DI-FORNO/index.html'
     },
     {
       title: 'Instituto Horizonte Vivo',
