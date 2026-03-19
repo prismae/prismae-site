@@ -18,16 +18,22 @@ export default function Projects() {
     {
       title: 'FIOR DI FORNO',
       hoverTitle: 'Pizzaria • E-commerce',
-      image: '${import.meta.env.BASE_URL}projects/FIOR-DI-FORNO/preview.jpg',
-      link: '${import.meta.env.BASE_URL}projects/FIOR-DI-FORNO/index.html'
+      image: `${import.meta.env.BASE_URL}projects/FIOR-DI-FORNO/previewFIORDIFORNO.jpg`,
+      video: `${import.meta.env.BASE_URL}projects/FIOR-DI-FORNO/videoFIORDIFORNO.mp4`
     },
     {
       title: 'Instituto Horizonte Vivo',
-      hoverTitle: 'Site Institucional • HTML • CSS • JS',
-      image: '/projects/Instituto-Horizonte-Vivo/preview.png',
-      link: '/projects/Instituto-Horizonte-Vivo/index.html'
+      hoverTitle: 'Site Institucional',
+      image: `${import.meta.env.BASE_URL}projects/Instituto-Horizonte-Vivo/previewINSTITUTOHORIZONTEVIVO.png`,
+      video: `${import.meta.env.BASE_URL}projects/Instituto-Horizonte-Vivo/videoINSTITUTOHORIZONTEVIVO.mp4`
+    },
+    {
+      title: 'Kampos',
+      hoverTitle: 'Loja de Camisa • E-commerce',
+      image: `${import.meta.env.BASE_URL}projects/Kampos/previewKAMPOS.png`,
+      video: `${import.meta.env.BASE_URL}projects/Kampos/videoKAMPOS.mp4`
     }
-  ]
+  ];
 
   useEffect(() => {
     const track = trackRef.current

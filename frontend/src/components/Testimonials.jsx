@@ -8,17 +8,17 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      name: 'Cristiano Maffort',
+      name: 'Lucas Andrade',
       text: 'A Prismae elevou nossa presença digital com um site rápido, elegante e extremamente profissional.',
       rating: 5
     },
     {
-      name: 'Daniela Kupsch',
+      name: 'Juliana Kupsch',
       text: 'Equipe atenciosa e processo muito organizado. O resultado ficou acima das nossas expectativas.',
       rating: 4.5
     },
     {
-      name: 'Edson',
+      name: 'Rafael Rocha',
       text: 'Desde o lançamento, percebemos melhoria na performance e na conversão. Recomendo sem dúvida.',
       rating: 5
     }

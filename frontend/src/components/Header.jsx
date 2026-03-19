@@ -15,7 +15,11 @@ export default function Header() {
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
-        <img className="logo" src="${import.meta.env.BASE_URL}images/logo.jpeg" alt="Prismae" />
+        <img 
+          className="logo" 
+          src={`${import.meta.env.BASE_URL}images/logo.jpeg`} 
+          alt="Prismae" 
+        />
 
         <nav className="nav">
           <a href="#services">Serviços</a>
