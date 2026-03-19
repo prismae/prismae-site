@@ -9,15 +9,18 @@ export default function Testimonials() {
   const testimonials = [
     {
       name: 'Cristiano Maffort',
-      text: 'A Prismae elevou nossa presença digital com um site rápido, elegante e extremamente profissional.'
+      text: 'A Prismae elevou nossa presença digital com um site rápido, elegante e extremamente profissional.',
+      rating: 5
     },
     {
       name: 'Daniela Kupsch',
-      text: 'Equipe atenciosa e processo muito organizado. O resultado ficou acima das nossas expectativas.'
+      text: 'Equipe atenciosa e processo muito organizado. O resultado ficou acima das nossas expectativas.',
+      rating: 4.5
     },
     {
       name: 'Edson',
-      text: 'Desde o lançamento, percebemos melhoria na performance e na conversão. Recomendo sem dúvida.'
+      text: 'Desde o lançamento, percebemos melhoria na performance e na conversão. Recomendo sem dúvida.',
+      rating: 5
     }
   ]
 
@@ -49,8 +52,15 @@ export default function Testimonials() {
         <div className="testimonials-track" ref={trackRef}>
           {[...testimonials, ...testimonials].map((testimonial, index) => (
             <article className="testimonial-card" key={`${testimonial.name}-${index}`}>
+
+              <div className="stars">
+                {'★'.repeat(Math.floor(testimonial.rating))}
+                {testimonial.rating % 1 !== 0 && '☆'}
+              </div>
+
               <p>{testimonial.text}</p>
               <h3>{testimonial.name}</h3>
+
             </article>
           ))}
         </div>

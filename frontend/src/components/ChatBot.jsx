@@ -12,7 +12,11 @@ const responses = {
     "Oferecemos desenvolvimento de sites institucionais e landing pages, criação de sistemas web simples e personalizados (como cadastros, controles e painéis administrativos), além de serviços de manutenção e hospedagem, com foco em qualidade, desempenho e experiência do usuário.",
     
   "Onde podemos ver trabalhos anteriores?": 
-    "Você pode conferir nossos projetos anteriores na seção 'Projetos' do site. Lá mostramos sites, sistemas e soluções digitais que já desenvolvemos para nossos clientes."
+    "Você pode conferir nossos projetos anteriores na seção 'Projetos' do site. Lá mostramos sites, sistemas e soluções digitais que já desenvolvemos para nossos clientes.",
+
+  // ✅ NOVA PERGUNTA
+  "Quais planos a Prismae oferece?":
+    "Oferecemos três planos principais:\n\nSTART: Sites institucionais simples (até 5 páginas), ideal para presença digital inicial.\n\nPRO: Sites profissionais completos com mais páginas, animações, SEO e identidade visual.\n\nPREMIUM: Sistemas e plataformas completas com painel administrativo, banco de dados e funcionalidades avançadas.\n\nTodos incluem hospedagem e podem ser personalizados conforme sua necessidade."
 };
 
 export default function ChatBot() {
@@ -36,7 +40,7 @@ export default function ChatBot() {
 
   return (
     <div className={`chatbot ${isOpen ? "open" : ""}`}>
-      {/* Ícone de balão de fala preto sobre fundo branco */}
+      
       <div className="chatbot-icon" onClick={() => setIsOpen(!isOpen)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
