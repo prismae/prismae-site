@@ -10,7 +10,6 @@
   text-align: left;
 }
 
-/* Container */
 .carousel {
   overflow: hidden;
   position: relative;
@@ -39,13 +38,11 @@
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-
 .project-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
-  
+  transition: transform 0.5s ease, opacity 0.3s ease;
   user-select: none;
   -webkit-user-drag: none;
   pointer-events: none;
@@ -55,18 +52,11 @@
   transform: scale(1.08);
 }
 
-.project-card img {
-  transition: transform 0.5s ease, opacity 0.3s ease;
-}
-
-
-
-/* Destaque automático visual */
 .project-card:hover {
   transform: scale(1.12);
   box-shadow:
-    0 30px 60px rgba(0,0,0,0.6),
-    0 0 40px rgba(0,255,153,0.2);
+    0 30px 60px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(0, 255, 153, 0.2);
 }
 
 .project-overlay {
@@ -74,9 +64,9 @@
   inset: 0;
   background: linear-gradient(
     120deg,
-    rgba(255,0,76,0.95),
-    rgba(0,255,153,0.95),
-    rgba(0,200,255,0.95)
+    rgba(255, 0, 76, 0.95),
+    rgba(0, 255, 153, 0.95),
+    rgba(0, 200, 255, 0.95)
   );
   display: flex;
   align-items: center;
@@ -93,6 +83,8 @@
   -webkit-user-select: none;
   -ms-user-select: none;
   pointer-events: none;
+  text-align: center;
+  padding: 0 18px;
 }
 
 .project-card:hover .project-overlay {
@@ -103,7 +95,6 @@
   opacity: 0;
 }
 
-/* Fade cinematográfico */
 .fade-left,
 .fade-right {
   position: absolute;
@@ -122,4 +113,59 @@
 .fade-right {
   right: 0;
   background: linear-gradient(to left, #000 0%, transparent 100%);
+}
+
+@media (max-width: 1024px) {
+  .projects {
+    padding: 110px 8%;
+  }
+
+  .projects h2 {
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    margin-bottom: 60px;
+  }
+
+  .projects-track {
+    gap: 30px;
+  }
+
+  .project-card {
+    width: min(360px, 82vw);
+    height: 240px;
+  }
+
+  .project-overlay span {
+    font-size: 1.2rem;
+  }
+
+  .fade-left,
+  .fade-right {
+    width: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 90px 8%;
+  }
+
+  .projects-track {
+    gap: 20px;
+  }
+
+  .project-card {
+    width: min(320px, 84vw);
+    height: 210px;
+    border-radius: 18px;
+  }
+
+  .project-overlay span {
+    font-size: 1rem;
+    letter-spacing: 0.4px;
+  }
+
+  .fade-left,
+  .fade-right {
+    width: 44px;
+  }
 }

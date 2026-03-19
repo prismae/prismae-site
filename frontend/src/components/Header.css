@@ -7,41 +7,35 @@
   transition: background 0.4s ease, backdrop-filter 0.4s ease;
 }
 
-/* Header quando rola a página */
 .header.scrolled {
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(10px);
 }
 
-/* Container interno */
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px 24px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  gap: 20px;
   background: #000000;
 }
 
-/* LOGO */
 .logo {
-  height: clamp(40px, 4vw, 55px); /* responsivo */
+  height: clamp(40px, 4vw, 55px);
   width: auto;
   object-fit: contain;
   cursor: pointer;
 }
 
-/* NAV */
 .nav {
   display: flex;
   align-items: center;
   gap: 30px;
 }
 
-/* LINKS */
 .nav a {
   position: relative;
   text-decoration: none;
@@ -50,7 +44,6 @@
   transition: color 0.3s ease;
 }
 
-/* LINHA ANIMADA */
 .nav a::after {
   content: '';
   position: absolute;
@@ -66,12 +59,14 @@
   width: 100%;
 }
 
-/* BOTÃO CTA */
 .nav .cta {
+  min-height: 40px;
   padding: 8px 16px;
   border: 1px solid #ffffff;
   border-radius: 4px;
   transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav .cta:hover {
@@ -79,17 +74,31 @@
   color: #000000;
 }
 
-/* 📱 RESPONSIVO */
 @media (max-width: 768px) {
   .header-container {
     padding: 12px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .logo {
+    height: 42px;
   }
 
   .nav {
-    gap: 18px;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
   }
 
   .nav a {
     font-size: 0.85rem;
+    padding: 4px 0;
+  }
+
+  .nav .cta {
+    padding: 8px 14px;
   }
 }

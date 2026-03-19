@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
-        <img className="logo" src="public/images/logo.jpeg"></img>
+        <img className="logo" src="/images/logo.jpeg" alt="Prismae" />
 
         <nav className="nav">
           <a href="#services">Serviços</a>

@@ -6,7 +6,7 @@ const responses = {
     "A Prismae é uma empresa de desenvolvimento web e soluções digitais modernas. Criamos sites responsivos, sistemas web e experiências digitais únicas para empresas de todos os portes.",
     
   "Como entrar em contato?": 
-    "Você pode nos contatar pelo formulário de contato do site ou enviar um email diretamente para prismae.contato@gmail.com. Respondemos rapidamente a todas as solicitações.",
+    "Você pode nos contatar pelo Linktree da Prismae ou enviar um email diretamente para prismae.contato@gmail.com. Respondemos rapidamente a todas as solicitações.",
     
   "Quais serviços vocês oferecem?": 
     "Oferecemos desenvolvimento de sites institucionais e landing pages, criação de sistemas web simples e personalizados (como cadastros, controles e painéis administrativos), além de serviços de manutenção e hospedagem, com foco em qualidade, desempenho e experiência do usuário.",

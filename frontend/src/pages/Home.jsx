@@ -34,7 +34,7 @@ export default function Home() {
       <section>
         <Testimonials />
       </section>
-      
+
       {/* CONTACT */}
       <section>
         <Contact />

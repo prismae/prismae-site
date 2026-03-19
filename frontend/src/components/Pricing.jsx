@@ -3,52 +3,52 @@ import './Pricing.css'
 export default function Pricing() {
   const plans = [
     {
-      name: "START",
-      subtitle: "Presença Digital Básica",
-      color: "start",
-      projectPrice: "R$ 1.200 a R$ 2.500",
-      hosting: "R$ 59,99 / mês",
-      maintenance: "R$ 300 a R$ 600 / ano",
+      name: 'START',
+      subtitle: 'Presença Digital Básica',
+      color: 'start',
+      projectPrice: 'R$ 1.200 a R$ 2.500',
+      hosting: 'R$ 59,99 / mês',
+      maintenance: 'R$ 300 a R$ 600 / ano',
       features: [
-        "Site institucional (até 5 páginas)",
-        "Design responsivo",
-        "Formulário de contato",
-        "Publicação e configuração inicial",
-        "Hospedagem"
+        'Site institucional (até 5 páginas)',
+        'Design responsivo',
+        'Canal de contato externo',
+        'Publicação e configuração inicial',
+        'Hospedagem'
       ]
     },
     {
-      name: "PRO",
-      subtitle: "Site Profissional Completo",
-      color: "pro",
-      projectPrice: "R$ 2.500 a R$ 4.000",
-      hosting: "R$ 59,99 / mês",
-      maintenance: "R$ 800 a R$ 1.500 / ano",
+      name: 'PRO',
+      subtitle: 'Site Profissional Completo',
+      color: 'pro',
+      projectPrice: 'R$ 2.500 a R$ 4.000',
+      hosting: 'R$ 59,99 / mês',
+      maintenance: 'R$ 800 a R$ 1.500 / ano',
       features: [
-        "Site completo (8 a 12 páginas)",
-        "Identidade visual profissional",
-        "Animações e interações",
-        "Formulários avançados",
-        "SEO básico",
-        "Responsividade total",
-        "Hospedagem"
+        'Site completo (8 a 12 páginas)',
+        'Identidade visual profissional',
+        'Animações e interações',
+        'Integração com canais de atendimento',
+        'SEO básico',
+        'Responsividade total',
+        'Hospedagem'
       ]
     },
     {
-      name: "PREMIUM",
-      subtitle: "Sistema ou Plataforma Completa",
-      color: "premium",
-      projectPrice: "R$ 6.000 a R$ 12.000+",
-      hosting: "R$ 59,99 / mês",
-      maintenance: "A partir de R$ 2.000 / ano",
+      name: 'PREMIUM',
+      subtitle: 'Sistema ou Plataforma Completa',
+      color: 'premium',
+      projectPrice: 'R$ 6.000 a R$ 12.000+',
+      hosting: 'R$ 59,99 / mês',
+      maintenance: 'A partir de R$ 2.000 / ano',
       features: [
-        "Sistema Web (React + Python)",
-        "Painel administrativo",
-        "Banco de dados",
-        "Controle de usuários",
-        "Relatórios e dashboards",
-        "Segurança e otimização",
-        "Hospedagem"
+        'Sistema Web (React + Python)',
+        'Painel administrativo',
+        'Banco de dados',
+        'Controle de usuários',
+        'Relatórios e dashboards',
+        'Segurança e otimização',
+        'Hospedagem'
       ]
     }
   ]
@@ -78,7 +78,13 @@ export default function Pricing() {
               ))}
             </ul>
 
-            <button>Solicitar Orçamento</button>
+            <a
+              className="pricing-button"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=prismae.contato@gmail.com&subject=Solicitação%20de%20Orçamento"
+              target="_blank"
+            >
+            Solicitar Orçamento
+            </a>
           </div>
         ))}
       </div>
