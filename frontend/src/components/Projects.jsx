@@ -26,12 +26,6 @@ export default function Projects() {
       hoverTitle: 'Site Institucional • HTML • CSS • JS',
       image: '/projects/Instituto-Horizonte-Vivo/preview.png',
       link: '/projects/Instituto-Horizonte-Vivo/index.html'
-    },
-    {
-      title: 'Kampos',
-      hoverTitle: 'Dashboard Interativo • Frontend',
-      image: '/projects/dashboard/preview.jpg',
-      link: '/projects/Kampos/index.html'
     }
   ]
 
