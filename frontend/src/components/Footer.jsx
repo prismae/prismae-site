@@ -20,5 +20,6 @@ export default function Footer() {
         © 2026 PRISMAE. Todos os direitos reservados.
       </div>
     </footer>
+    
   )
 }
