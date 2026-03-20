@@ -38,7 +38,7 @@ export default function Pricing() {
       name: 'PREMIUM',
       subtitle: 'Sistema ou Plataforma Completa',
       color: 'premium',
-      projectPrice: 'R$ 8.000,00 a R$ 12.000,00+',
+      projectPrice: 'R$ 8.000,00+',
       hosting: 'R$ 59,99 / mês',
       maintenance: 'R$ 200,00 a R$ 800,00+ / mês',
       features: [
