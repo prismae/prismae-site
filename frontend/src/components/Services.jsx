@@ -4,16 +4,28 @@ import RGBLine from './RGBLine'
 export default function Services() {
   const services = [
     {
+      title: 'Sites Institucionais',
+      desc: 'Criação de sites profissionais para empresas, escolas, ONGs e profissionais autônomos, com design moderno e responsivo.'
+    },
+    {
+      title: 'Landing Pages',
+      desc: 'Páginas estratégicas focadas em conversão, ideais para campanhas, captação de leads e divulgação de serviços.'
+    },
+    {
       title: 'Web Design',
       desc: 'Layouts modernos focados em experiência e identidade.'
     },
     {
-      title: 'Desenvolvimento',
-      desc: 'Sites rápidos, escaláveis e bem estruturados.'
+      title: 'Manutenção e Suporte',
+      desc: 'Correções, atualizações e suporte técnico contínuo para garantir o funcionamento e segurança do seu site.'
     },
     {
-      title: 'Performance',
-      desc: 'Otimização para SEO, velocidade e conversão.'
+      title: 'Hospedagem e Publicação',
+      desc: 'Configuração, publicação e hospedagem do seu projeto, deixando tudo pronto para funcionar na internet.'
+    },
+    {
+      title: 'SEO e Performance',
+      desc: 'Otimização básica para melhorar velocidade, posicionamento no Google e desempenho geral do site.'
     }
   ]
 
