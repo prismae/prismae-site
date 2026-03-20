@@ -43,14 +43,6 @@ export default function Contact() {
                 <MdEmail className="icon" />
                 Gmail
               </a>
-
-              <a
-                className="contact-modal-btn phone"
-                href="tel:+5531975025644"
-              >
-                <FaPhoneAlt className="icon" />
-                Ligar agora
-              </a>
             </div>
 
             <button className="contact-close-btn" onClick={() => setOpen(false)}>
