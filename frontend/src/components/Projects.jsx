@@ -1,4 +1,5 @@
-import { useEffect, useRef } from 'react'
+
+import { useEffect, useRef, useState } from 'react'
 import './Projects.css'
 
 export default function Projects() {
@@ -13,6 +14,9 @@ export default function Projects() {
 
   const dragDistance = useRef(0)
   const isClickAllowed = useRef(true)
+
+  const [videoAtivo, setVideoAtivo] = useState(null)
+  const [loading, setLoading] = useState(true)
 
   const projects = [
     {
@@ -80,7 +84,6 @@ export default function Projects() {
 
       dragDistance.current += Math.abs(delta)
 
-      // threshold (8px é ideal)
       if (dragDistance.current > 8) {
         isClickAllowed.current = false
       }
@@ -92,7 +95,6 @@ export default function Projects() {
       isDragging.current = false
       velocity.current = 0.8
     }
-
 
     track.addEventListener('mousedown', onDown)
     track.addEventListener('touchstart', onDown)
@@ -118,32 +120,60 @@ export default function Projects() {
       <div className="carousel">
         <div className="projects-track" ref={trackRef}>
           {[...projects, ...projects].map((project, index) => (
-            <a
+            <div
               key={index}
               className="project-card"
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
               draggable="false"
               onMouseDown={(e) => e.preventDefault()}
-              onClick={(e) => {
-                if (!isClickAllowed.current) {
-                  e.preventDefault()
-                  e.stopPropagation()
-                }
+              onClick={() => {
+                if (!isClickAllowed.current) return
+                setVideoAtivo(project.video)
+                setLoading(true)
               }}
             >
               <img src={project.image} alt={project.title} draggable="false"/>
               <div className="project-overlay">
                 <span>{project.hoverTitle}</span>
               </div>
-            </a>
+            </div>
           ))}
         </div>
 
         <div className="fade-left"></div>
         <div className="fade-right"></div>
       </div>
+
+      {/* MODAL */}
+      {videoAtivo && (
+        <div className="modal" onClick={() => setVideoAtivo(null)}>
+          <div
+            className="modal-content show"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="close-btn"
+              onClick={() => setVideoAtivo(null)}
+            >
+              ✕
+            </button>
+
+            {loading && <div className="loader"></div>}
+
+            <video
+              src={videoAtivo}
+              controls
+              autoPlay
+              muted
+              playsInline
+              onLoadedData={() => setLoading(false)}
+              onVolumeChange={(e) => {
+                e.target.muted = true
+                e.target.volume = 0
+              }}
+            />
+          </div>
+        </div>
+      )}
     </section>
   )
 }
