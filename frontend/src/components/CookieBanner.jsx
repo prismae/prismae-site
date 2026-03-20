@@ -63,7 +63,7 @@ export default function CookieBanner() {
               Utilizamos cookies para melhorar sua experiência, analisar o tráfego
               e personalizar conteúdos. Veja nossa{" "}
               <a
-                href="public/politica-de-privacidade.html"
+                href="/politica-de-privacidade.html"
                 target="_blank"
                 rel="noopener noreferrer"
               >
