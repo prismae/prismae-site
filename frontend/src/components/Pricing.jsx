@@ -6,7 +6,7 @@ export default function Pricing() {
       name: 'START',
       subtitle: 'Presença Digital Básica',
       color: 'start',
-      projectPrice: 'R$ 2.000 a R$ 2.999',
+      projectPrice: 'R$ 2.000,00 a R$ 2500,00',
       hosting: 'R$ 59,99 / mês',
       maintenance: 'R$ 49,00 a R$ 99,99 / mês',
       features: [
@@ -21,7 +21,7 @@ export default function Pricing() {
       name: 'PRO',
       subtitle: 'Site Profissional Completo',
       color: 'pro',
-      projectPrice: 'R$ 3.000 a R$ 5.999',
+      projectPrice: 'R$ 3.499,99 a R$ 7000,00',
       hosting: 'R$ 59,99 / mês',
       maintenance: 'R$ 100,00 a R$ 199,99 / mês',
       features: [
@@ -38,7 +38,7 @@ export default function Pricing() {
       name: 'PREMIUM',
       subtitle: 'Sistema ou Plataforma Completa',
       color: 'premium',
-      projectPrice: 'R$ 6.000 a R$ 12.000+',
+      projectPrice: 'R$ 8.000,00 a R$ 12.000,00+',
       hosting: 'R$ 59,99 / mês',
       maintenance: 'R$ 200,00 a R$ 800,00+ / mês',
       features: [
