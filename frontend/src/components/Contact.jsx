@@ -6,7 +6,7 @@ import './Contact.css'
 export default function Contact() {
   const [open, setOpen] = useState(false)
 
-  const whatsappNumber = '5531999999999'
+  const whatsappNumber = '5531975025644'
 
   return (
     <section className="contact" id="contact">
@@ -46,7 +46,7 @@ export default function Contact() {
 
               <a
                 className="contact-modal-btn phone"
-                href="tel:+5531999999999"
+                href="tel:+5531975025644"
               >
                 <FaPhoneAlt className="icon" />
                 Ligar agora

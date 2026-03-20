@@ -6,7 +6,7 @@ export default function Pricing() {
       name: 'START',
       subtitle: 'Presença Digital Básica',
       color: 'start',
-      projectPrice: 'R$ 2.000,00 a R$ 2500,00',
+      projectPrice: 'R$ 2.000,00 a R$ 3000,00',
       hosting: 'R$ 59,99 / mês',
       maintenance: 'R$ 49,00 a R$ 99,99 / mês',
       features: [

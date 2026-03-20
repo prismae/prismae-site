@@ -5,6 +5,7 @@ import Contact from '../components/Contact'
 import Pricing from '../components/Pricing'
 import Testimonials from '../components/Testimonials'
 import RGBLine from '../components/RGBLine'
+import CookieBanner from '../components/CookieBanner'
 
 export default function Home() {
   return (
@@ -38,6 +39,10 @@ export default function Home() {
       {/* CONTACT */}
       <section>
         <Contact />
+      </section>
+      {/* Cookie */}
+      <section>
+        <CookieBanner />
       </section>
     </main>
   )
