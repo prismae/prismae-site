@@ -1,6 +1,10 @@
 import './Pricing.css'
+import { useState } from 'react'
 
 export default function Pricing() {
+  const [modal, setModal] = useState(false)
+  const [planoSelecionado, setPlanoSelecionado] = useState('')
+
   const plans = [
     {
       name: 'START',
@@ -78,16 +82,60 @@ export default function Pricing() {
               ))}
             </ul>
 
-            <a
+            <button
               className="pricing-button"
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=prismae.contato@gmail.com&subject=Solicitação%20de%20Orçamento"
-              target="_blank"
+              onClick={() => {
+                setPlanoSelecionado(plan.name)
+                setModal(true)
+              }}
             >
-            Solicitar Orçamento
-            </a>
+              Solicitar Orçamento
+            </button>
           </div>
         ))}
       </div>
+
+      {/* MODAL */}
+        {modal && (
+          <div
+            className="pricing-modal-overlay"
+            onClick={() => setModal(false)}
+          >
+            <div
+              className="pricing-modal"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <h3>Solicitar Orçamento</h3>
+
+              <div className="pricing-modal-actions">
+
+                <a
+                  href={`https://wa.me/31975025644?text=Quero%20orçamento%20do%20plano%20${planoSelecionado}`}
+                  target="_blank"
+                  className="pricing-modal-btn pricing-whatsapp"
+                >
+                  WhatsApp
+                </a>
+
+                <a
+                  href={`https://mail.google.com/mail/?view=cm&fs=1&to=prismae.contato@gmail.com&subject=Orçamento%20${planoSelecionado}`}
+                  target="_blank"
+                  className="pricing-modal-btn pricing-gmail"
+                >
+                  Gmail
+                </a>
+
+              </div>
+
+              <button
+                className="pricing-close"
+                onClick={() => setModal(false)}
+              >
+                Fechar
+              </button>
+            </div>
+          </div>
+        )}
     </section>
   )
 }

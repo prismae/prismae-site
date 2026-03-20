@@ -37,7 +37,7 @@ export default function Contact() {
 
               <a
                 className="contact-modal-btn gmail"
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=prismae.contato@gmail.com&subject=Solicitação%20de%20Orçamento"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=prismae.contato@gmail.com"
                 target="_blank"
               >
                 <MdEmail className="icon" />

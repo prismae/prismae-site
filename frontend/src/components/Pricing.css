@@ -186,3 +186,104 @@
 .pricing-button {
   margin-top: auto;
 }
+
+.pricing-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+  padding: 16px;
+}
+
+.pricing-modal {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 360px;
+
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  animation: pricingModalEnter 0.25s ease;
+}
+
+.pricing-modal h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* BOTÕES */
+.pricing-modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pricing-modal-btn {
+  height: 48px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.25s;
+}
+
+/* WHATS */
+.pricing-whatsapp {
+  background: linear-gradient(90deg, #ff004c, #00ff99, #00c8ff);
+  color: #000;
+}
+
+/* GMAIL */
+.pricing-gmail {
+  background: linear-gradient(90deg, #ff004c, #00ff99, #00c8ff);
+  color: #000;
+}
+
+.pricing-modal-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+/* FECHAR */
+.pricing-close {
+  margin-top: 6px;
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.pricing-close:hover {
+  color: #fff;
+}
+
+/* ANIMAÇÃO */
+@keyframes pricingModalEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

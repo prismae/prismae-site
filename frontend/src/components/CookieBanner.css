@@ -1,5 +1,5 @@
 /* FUNDO ESCURO COM BLUR */
-.cookie-overlay {
+.pcookie-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -14,7 +14,7 @@
 }
 
 /* POPUP */
-.cookie-popup {
+.pcookie-popup {
   background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
   border: 1px solid #222;
   border-radius: 16px;
@@ -27,31 +27,31 @@
 }
 
 /* TÍTULO */
-.cookie-popup h3 {
+.pcookie-popup h3 {
   margin-bottom: 10px;
 }
 
 /* TEXTO */
-.cookie-popup p {
+.pcookie-popup p {
   font-size: 14px;
   color: #ccc;
 }
 
 /* LINK */
-.cookie-popup a {
+.pcookie-popup a {
   color: #4da6ff;
   text-decoration: underline;
 }
 
 /* BOTÕES */
-.botoes {
+.pcookie-botoes {
   display: flex;
   gap: 10px;
   margin-top: 20px;
   flex-wrap: wrap;
 }
 
-button {
+.pcookie-button {
   padding: 10px 18px;
   border-radius: 10px;
   border: none;
@@ -61,25 +61,25 @@ button {
 }
 
 /* BOTÃO RGB */
-button:not(.secundario) {
+.pcookie-button:not(.secundario) {
   background: linear-gradient(90deg, red, green, blue);
   color: #fff;
 }
 
 /* BOTÃO SECUNDÁRIO */
-.secundario {
+.pcookie-secundario {
   background: transparent;
   border: 1px solid #444;
   color: #aaa;
 }
 
-button:hover {
+.pcookie-button:hover {
   transform: scale(1.05);
   opacity: 0.9;
 }
 
 /* CHECKBOX */
-.cookie-popup label {
+.pcookie-popup label {
   display: block;
   margin-top: 10px;
   font-size: 14px;

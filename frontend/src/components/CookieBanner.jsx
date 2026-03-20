@@ -55,8 +55,8 @@ export default function CookieBanner() {
   return (
     <>
       {!modal && (
-        <div className="cookie-overlay">
-          <div className="cookie-popup">
+        <div className="pcookie-overlay">
+          <div className="pcookie-popup">
             <h3>🍪 Uso de Cookies</h3>
 
             <p>
@@ -71,12 +71,12 @@ export default function CookieBanner() {
               </a>.
             </p>
 
-            <div className="botoes">
-              <button onClick={aceitarTodos}>Aceitar</button>
-              <button onClick={recusar} className="secundario">
+            <div className="pcookie-botoes">
+              <button className="pcookie-button" onClick={aceitarTodos}>Aceitar</button>
+              <button onClick={recusar} className="pcookie-secundario">
                 Recusar
               </button>
-              <button onClick={() => setModal(true)} className="secundario">
+              <button onClick={() => setModal(true)} className="pcookie-secundario">
                 Configurar
               </button>
             </div>
@@ -85,8 +85,8 @@ export default function CookieBanner() {
       )}
 
       {modal && (
-        <div className="cookie-overlay">
-          <div className="cookie-popup">
+        <div className="pcookie-overlay">
+          <div className="pcookie-popup">
             <h3>Preferências de Cookies</h3>
 
             <label>
@@ -122,11 +122,11 @@ export default function CookieBanner() {
               Marketing
             </label>
 
-            <div className="botoes">
-              <button onClick={() => salvar(preferencias)}>
+            <div className="pcookie-botoes">
+              <button className="pcookie-button" onClick={() => salvar(preferencias)}>
                 Salvar
               </button>
-              <button onClick={() => setModal(false)} className="secundario">
+              <button onClick={() => setModal(false)} className="pcookie-secundario">
                 Voltar
               </button>
             </div>

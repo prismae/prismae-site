@@ -15,7 +15,7 @@ export default function Testimonials() {
     {
       name: 'Juliana Kupsch',
       text: 'Equipe atenciosa e processo muito organizado. O resultado ficou acima das nossas expectativas.',
-      rating: 4.5
+      rating: 5
     },
     {
       name: 'Rafael Rocha',
