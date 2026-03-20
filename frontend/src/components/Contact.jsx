@@ -20,13 +20,13 @@ export default function Contact() {
       </button>
 
       {open && (
-        <div className="modal-overlay" onClick={() => setOpen(false)}>
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
+        <div className="contact-modal-overlay" onClick={() => setOpen(false)}>
+          <div className="contact-modal" onClick={(e) => e.stopPropagation()}>
             <h3>Escolha uma das opções</h3>
 
-            <div className="modal-actions">
+            <div className="contact-modal-actions">
               <a
-                className="modal-btn whatsapp"
+                className="contact-modal-btn whatsapp"
                 href={`https://wa.me/${whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -36,7 +36,7 @@ export default function Contact() {
               </a>
 
               <a
-                className="modal-btn gmail"
+                className="contact-modal-btn gmail"
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=prismae.contato@gmail.com&subject=Solicitação%20de%20Orçamento"
                 target="_blank"
               >
@@ -45,7 +45,7 @@ export default function Contact() {
               </a>
 
               <a
-                className="modal-btn phone"
+                className="contact-modal-btn phone"
                 href="tel:+5531999999999"
               >
                 <FaPhoneAlt className="icon" />
@@ -53,7 +53,7 @@ export default function Contact() {
               </a>
             </div>
 
-            <button className="close-btn" onClick={() => setOpen(false)}>
+            <button className="contact-close-btn" onClick={() => setOpen(false)}>
               Fechar
             </button>
           </div>
