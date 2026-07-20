@@ -1,5 +1,5 @@
 .services {
-  padding: 120px 8%;
+  padding: 130px 8% 100px;
 }
 
 .services h2 {
@@ -10,14 +10,15 @@
   margin-top: 60px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+  gap: 24px;
 }
 
 .service-card {
-  background: #0f0f0f;
-  padding: 40px 30px;
-  border: 1px solid #1a1a1a;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: var(--surface);
+  padding: 36px 30px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-smooth), border-color var(--transition-fast), box-shadow var(--transition-smooth);
   position: relative;
   overflow: hidden;
 }
@@ -26,14 +27,9 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 0, 76, 0.15),
-    rgba(0, 255, 153, 0.15),
-    rgba(0, 200, 255, 0.15)
-  );
+  background: var(--rgb-gradient-soft);
   opacity: 0;
-  transition: 0.4s ease;
+  transition: opacity 0.5s ease;
 }
 
 .service-card:hover::before {
@@ -41,29 +37,33 @@
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  transform: translateY(-6px);
+  border-color: var(--border-strong);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
 }
 
 .service-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-bottom: 12px;
+  position: relative;
 }
 
 .service-card p {
-  color: #aaa;
+  color: var(--gray-500);
   line-height: 1.6;
+  position: relative;
+  font-size: 0.96rem;
 }
 
 @media (max-width: 768px) {
   .services {
-    padding: 90px 8%;
+    padding: 90px 8% 70px;
   }
 
   .services-grid {
     margin-top: 40px;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 18px;
   }
 
   .service-card {

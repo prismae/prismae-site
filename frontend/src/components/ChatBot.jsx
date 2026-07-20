@@ -16,7 +16,7 @@ const responses = {
 
   // ✅ NOVA PERGUNTA
   "Quais planos a Prismae oferece?":
-    "Oferecemos três planos principais:\n\nSTART: Sites institucionais simples (até 5 páginas), ideal para presença digital inicial.\n\nPRO: Sites profissionais completos com mais páginas, animações, SEO e identidade visual.\n\nPREMIUM: Sistemas e plataformas completas com painel administrativo, banco de dados e funcionalidades avançadas.\n\nTodos incluem hospedagem e podem ser personalizados conforme sua necessidade."
+    "Oferecemos três planos principais:\n\nSTART: Sites institucionais simples (até 5 páginas), ideal para presença digital inicial.\n\nPRO: Sites profissionais completos com mais páginas, animações, SEO e identidade visual.\n\nPREMIUM: Sistemas e plataformas completas com painel administrativo, banco de dados e funcionalidades avançadas.\n\nTodos incluem hospedagem e são personalizados conforme sua necessidade. Fale com a gente para receber uma proposta sob medida!"
 };
 
 export default function ChatBot() {

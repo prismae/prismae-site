@@ -10,9 +10,6 @@ export default function Pricing() {
       name: 'START',
       subtitle: 'Presença Digital Básica',
       color: 'start',
-      projectPrice: 'R$ 2.000,00 a R$ 3000,00',
-      hosting: 'R$ 59,99 / mês',
-      maintenance: 'R$ 49,00 a R$ 99,99 / mês',
       features: [
         'Site institucional (até 5 páginas)',
         'Design responsivo',
@@ -25,9 +22,7 @@ export default function Pricing() {
       name: 'PRO',
       subtitle: 'Site Profissional Completo',
       color: 'pro',
-      projectPrice: 'R$ 3.499,99 a R$ 7000,00',
-      hosting: 'R$ 59,99 / mês',
-      maintenance: 'R$ 100,00 a R$ 199,99 / mês',
+      highlight: true,
       features: [
         'Site completo (8 a 12 páginas)',
         'Identidade visual profissional',
@@ -42,9 +37,6 @@ export default function Pricing() {
       name: 'PREMIUM',
       subtitle: 'Sistema ou Plataforma Completa',
       color: 'premium',
-      projectPrice: 'R$ 8.000,00 a R$ 12.000,00+',
-      hosting: 'R$ 59,99 / mês',
-      maintenance: 'R$ 200,00 a R$ 800,00+ / mês',
       features: [
         'Sistema Web (React + Python)',
         'Painel administrativo',
@@ -59,22 +51,24 @@ export default function Pricing() {
 
   return (
     <section className="pricing" id="pricing">
-      <h2>Pacotes & Preços</h2>
+      <div className="pricing-header">
+        <h2>Planos</h2>
+        <p className="pricing-lead">
+          Escolha o ponto de partida ideal para o seu projeto. Cada plano é adaptado
+          às necessidades do seu negócio — fale com a gente para receber uma proposta sob medida.
+        </p>
+      </div>
 
       <div className="pricing-grid">
         {plans.map((plan, index) => (
           <div
             key={index}
-            className={`pricing-card ${plan.color}`}
+            className={`pricing-card ${plan.color} ${plan.highlight ? 'highlight' : ''}`}
           >
+            {plan.highlight && <span className="pricing-badge">Mais procurado</span>}
+
             <h3>{plan.name}</h3>
             <p className="subtitle">{plan.subtitle}</p>
-
-            <div className="price-section">
-              <h4>{plan.projectPrice}</h4>
-              <p><strong>Hospedagem:</strong> {plan.hosting}</p>
-              <p><strong>Manutenção:</strong> {plan.maintenance}</p>
-            </div>
 
             <ul>
               {plan.features.map((feature, i) => (
@@ -89,11 +83,15 @@ export default function Pricing() {
                 setModal(true)
               }}
             >
-              Solicitar Orçamento
+              Falar com a Prismae
             </button>
           </div>
         ))}
       </div>
+
+      <p className="pricing-note">
+        Valores personalizados conforme o escopo do projeto. Entre em contato para um orçamento sem compromisso.
+      </p>
 
       {/* MODAL */}
         {modal && (
@@ -106,11 +104,12 @@ export default function Pricing() {
               onClick={(e) => e.stopPropagation()}
             >
               <h3>Solicitar Orçamento</h3>
+              <p className="pricing-modal-plan">Plano selecionado: <strong>{planoSelecionado}</strong></p>
 
               <div className="pricing-modal-actions">
 
                 <a
-                  href={`https://wa.me/31975025644?text=Quero%20orçamento%20do%20plano%20${planoSelecionado}`}
+                  href={`https://wa.me/31975025644?text=Quero%20saber%20mais%20sobre%20o%20plano%20${planoSelecionado}`}
                   target="_blank"
                   className="pricing-modal-btn pricing-whatsapp"
                 >

@@ -24,6 +24,7 @@ export default function Header() {
         <nav className="nav">
           <a href="#services">Serviços</a>
           <a href="#projects">Projetos</a>
+          <a href="#pricing">Planos</a>
           <a href="#contact" className="cta">Contato</a>
         </nav>
       </div>

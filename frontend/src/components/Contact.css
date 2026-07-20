@@ -2,15 +2,38 @@
   padding: 120px 8%;
 }
 
+.contact-card {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 72px 8%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--rgb-gradient-soft);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 .contact h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  margin-bottom: 18px;
+  position: relative;
 }
 
 .contact-text {
   max-width: 560px;
-  margin-bottom: 32px;
-  color: #aaa;
+  margin: 0 auto 36px;
+  color: var(--gray-500);
+  position: relative;
 }
 
 .contact-button {
@@ -18,12 +41,12 @@
   align-items: center;
   justify-content: center;
   min-height: 52px;
-  padding: 14px 32px;
+  padding: 15px 34px;
   border: none;
-  border-radius: 12px;
+  border-radius: 999px;
 
-  background: linear-gradient(90deg, #ff004c, #00ff99, #00c8ff);
-  color: #000;
+  background: var(--rgb-gradient);
+  color: var(--black);
   font-weight: 600;
   letter-spacing: 0.3px;
 
@@ -31,14 +54,14 @@
   position: relative;
   overflow: hidden;
 
-  transition: all 0.25s ease;
+  transition: all var(--transition-fast);
 }
 
 /* HOVER MAIS FORTE */
 .contact-button:hover {
   transform: translateY(-2px);
   filter: brightness(1.08);
-  box-shadow: 0 10px 25px rgba(0, 255, 153, 0.15);
+  box-shadow: 0 14px 30px rgba(23, 232, 160, 0.18);
 }
 
 /* CLICK (efeito pressionado) */
@@ -73,12 +96,17 @@
     padding: 90px 8%;
   }
 
+  .contact-card {
+    padding: 52px 7%;
+    border-radius: var(--radius-md);
+  }
+
   .contact h2 {
     margin-bottom: 16px;
   }
 
   .contact-text {
-    margin-bottom: 24px;
+    margin-bottom: 28px;
     font-size: 0.95rem;
   }
 
@@ -97,17 +125,18 @@
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
   display: grid;
-  place-items: center; /* CENTRALIZA PERFEITO */
+  place-items: center;
   z-index: 999;
   padding: 16px;
 }
 
 /* JANELA DO MODAL */
 .contact-modal {
-  background: #111;
-  border: 1px solid #222;
-  border-radius: 18px;
+  background: var(--gray-900);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
   width: 100%;
   max-width: 380px;
   padding: 32px 24px 24px;
@@ -140,13 +169,13 @@
 .contact-modal-btn {
   width: 100%;
   height: 48px;
-  border-radius: 10px;
+  border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px; /* espaço entre ícone e texto */
+  gap: 10px;
   transition: 0.25s;
 }
 
@@ -156,14 +185,14 @@
 
 /* WHATS */
 .whatsapp {
-  background: linear-gradient(90deg, #ff004c, #00ff99, #00c8ff);
-  color: #000;
+  background: var(--rgb-gradient);
+  color: var(--black);
 }
 
-/* GMAIL (mantendo seu branding) */
+/* GMAIL */
 .gmail {
-  background: linear-gradient(90deg, #ff004c, #00ff99, #00c8ff);
-  color: #000;
+  background: var(--rgb-gradient);
+  color: var(--black);
 }
 
 .contact-modal-btn:hover {
@@ -176,14 +205,14 @@
   margin-top: 6px;
   background: transparent;
   border: none;
-  color: #888;
+  color: var(--gray-500);
   font-size: 0.9rem;
   cursor: pointer;
   transition: 0.2s;
 }
 
 .contact-close-btn:hover {
-  color: #fff;
+  color: var(--white);
 }
 
 /* ANIMAÇÃO MAIS SUAVE */
@@ -218,6 +247,6 @@
 
 .phone {
   background: transparent;
-  border: 1px solid #333;
-  color: #fff;
+  border: 1px solid var(--border-strong);
+  color: var(--white);
 }

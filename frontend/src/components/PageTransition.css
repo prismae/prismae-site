@@ -1,0 +1,52 @@
+.page-transition {
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+  will-change: opacity, transform, filter;
+}
+
+.page-transition.in {
+  animation-name: pageFadeIn;
+}
+
+.page-transition.out {
+  animation-name: pageFadeOut;
+  animation-duration: 0.32s;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes pageFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-14px);
+    filter: blur(6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition,
+  .page-transition.in,
+  .page-transition.out {
+    animation: none !important;
+    filter: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

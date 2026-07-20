@@ -22,27 +22,32 @@
 .testimonial-card {
   width: min(420px, 82vw);
   min-height: 220px;
-  background: var(--gray-900);
-  border: 1px solid var(--gray-800);
-  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
   padding: 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 16px;
   flex-shrink: 0;
+  transition: border-color var(--transition-fast);
+}
+
+.testimonial-card:hover {
+  border-color: var(--border-strong);
 }
 
 /* ⭐ ESTRELAS */
 .stars {
-  color: #FFD700;
+  color: #ffd700;
   font-size: 1.1rem;
   letter-spacing: 3px;
 }
 
 /* TEXTO */
 .testimonial-card p {
-  color: #b8b8b8;
+  color: var(--gray-400);
   font-size: 1rem;
   line-height: 1.7;
 }

@@ -9,8 +9,13 @@ export default function Hero() {
 
   return (
     <section className="hero">
+      <div className="hero-glow"></div>
+
       <div className="hero-content">
-        <span className="hero-tag">PRISMAE • 2026</span>
+        <span className="hero-tag">
+          <span className="hero-tag-dot"></span>
+          PRISMAE • DESENVOLVIMENTO WEB
+        </span>
 
         <h1>
           Transformando ideias em<br />
@@ -22,9 +27,14 @@ export default function Hero() {
           focados em conversão e experiência.
         </p>
 
-        <a href="#contact" className="hero-btn">
-          Vamos conversar
-        </a>
+        <div className="hero-actions">
+          <a href="#contact" className="hero-btn">
+            Vamos conversar
+          </a>
+          <a href="#projects" className="hero-btn-ghost">
+            Ver projetos
+          </a>
+        </div>
       </div>
 
       <div className="hero-rgb-line"></div>

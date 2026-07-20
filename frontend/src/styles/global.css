@@ -3,6 +3,10 @@ body {
   color: var(--white);
   font-family: var(--font-main);
   line-height: 1.6;
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(31, 176, 255, 0.06), transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(255, 45, 106, 0.05), transparent 40%);
+  background-attachment: fixed;
 }
 
 main {
@@ -20,15 +24,16 @@ main {
 h1,
 h2,
 h3 {
-  font-weight: 600;
+  font-weight: 650;
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
 }
 
 h2 {
-  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  font-size: clamp(1.9rem, 4vw, 2.4rem);
 }
 
 h3 {
@@ -62,6 +67,7 @@ section {
 
 ::-webkit-scrollbar-thumb {
   background: var(--gray-700);
+  border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -70,6 +76,6 @@ section {
 
 /* Seleção de texto */
 ::selection {
-  background: var(--rgb-red);
+  background: var(--rgb-blue);
   color: var(--black);
 }

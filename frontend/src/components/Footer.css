@@ -1,5 +1,6 @@
 .footer {
-  background: #0f0f0f;
+  background: var(--gray-950);
+  border-top: 1px solid var(--border-subtle);
   padding: 80px 40px 40px;
   margin-top: 120px;
 }
@@ -14,13 +15,17 @@
 }
 
 .footer-brand h2 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   letter-spacing: 3px;
   margin-bottom: 10px;
+  background: var(--rgb-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .footer-brand p {
-  color: #aaaaaa;
+  color: var(--gray-500);
   max-width: 300px;
   line-height: 1.6;
 }
@@ -32,10 +37,11 @@
 }
 
 .footer-links a {
-  color: #ffffff;
+  color: var(--gray-400);
   text-decoration: none;
   position: relative;
   width: fit-content;
+  transition: color var(--transition-fast);
 }
 
 .footer-links a::after {
@@ -45,8 +51,13 @@
   left: 0;
   width: 0%;
   height: 2px;
-  background: linear-gradient(90deg, #ff004c, #00ff99, #00c8ff);
-  transition: width 0.3s ease;
+  border-radius: 2px;
+  background: var(--rgb-gradient);
+  transition: width var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--white);
 }
 
 .footer-links a:hover::after {
@@ -57,5 +68,5 @@
   margin-top: 60px;
   text-align: center;
   font-size: 0.8rem;
-  color: #777777;
+  color: var(--gray-500);
 }

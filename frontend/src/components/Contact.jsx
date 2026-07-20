@@ -10,6 +10,7 @@ export default function Contact() {
 
   return (
     <section className="contact" id="contact">
+      <div className="contact-card">
       <h2>Contato</h2>
       <p className="contact-text">
         Fale com a Prismae pelos nossos canais oficiais e escolha a melhor forma de iniciar seu projeto.
@@ -18,6 +19,7 @@ export default function Contact() {
       <button className="contact-button" onClick={() => setOpen(true)}>
         Entrar em contato
       </button>
+      </div>
 
       {open && (
         <div className="contact-modal-overlay" onClick={() => setOpen(false)}>
